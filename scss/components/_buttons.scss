@@ -1,0 +1,23 @@
+.btn {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid color(lightGray);
+  color: color(lightGray);
+  font-size: 2rem;
+  background-color: transparent;
+  margin-right: 1.5rem;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.5s;
+
+  @include response(sm) {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    width: 50%;
+  }
+
+  &:hover {
+    background-color: color(purpleColor);
+  }
+}

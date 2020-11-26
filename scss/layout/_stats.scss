@@ -1,0 +1,40 @@
+.stats {
+  @include sectionSpacing();
+  @include flexLayout();
+  flex-direction: row;
+  justify-content: space-evenly;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/nature4.jpg") center/cover no-repeat fixed;
+  // background: linear-gradient(color(darkGray), transparent 90%),
+  //   linear-gradient(0deg, #fff, transparent),
+  //   #000 url(/images/nature4.jpg) no-repeat center/cover fixed;
+
+  .stat {
+    color: color(lightGray);
+
+    h3 {
+      color: color(purpleColor);
+      font-size: size(xl) + 4rem;
+
+      @include response(sm) {
+        font-size: size(xl) + 2rem;
+      }
+
+      @include response(xs) {
+        font-size: size(xl);
+      }
+    }
+
+    h4 {
+      font-size: size(xl);
+
+      @include response(sm) {
+        font-size: size(lg);
+      }
+
+      @include response(xs) {
+        font-size: size(md);
+      }
+    }
+  }
+}

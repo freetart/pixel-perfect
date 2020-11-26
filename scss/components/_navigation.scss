@@ -1,0 +1,36 @@
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2rem 0;
+
+  .logo {
+    h3 {
+      @include headingStyles();
+      font-size: size(xl) + 1rem;
+      color: color(lightGray);
+      font-family: "Cedarville Cursive", cursive;
+    }
+
+    span {
+      color: color(purpleColor);
+    }
+  }
+
+  .nav-links {
+    @include response(xl) {
+      display: none;
+    }
+
+    a {
+      font-size: size(sm);
+      margin-right: 1rem;
+      color: color(lightGray);
+      transition: color 0.3s;
+
+      &:hover {
+        color: color(purpleColor);
+      }
+    }
+  }
+}

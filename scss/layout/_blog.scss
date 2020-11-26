@@ -1,0 +1,54 @@
+.blogs {
+  @include sectionSpacing();
+  background-color: color(darkGray);
+
+  p {
+    color: color(lightGray);
+    text-align: center;
+    font-size: size(sm);
+    margin-bottom: 2rem;
+  }
+
+  .blog-posts {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @include response(md) {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .article {
+    padding: 1rem;
+    background-color: color(lightGray);
+    border-radius: 1rem;
+    margin: 2rem 1rem;
+    box-shadow: 0.3rem 0.3rem 0.1rem #e92929, 0.5rem 0.5rem 0.1rem #82e946,
+      0.7rem 0.7rem 0.1rem #297ce9, 0.9rem 0.9rem 0.1rem #e92999;
+  }
+
+  a {
+    font-size: size(xs);
+    color: color(darkGray);
+    transition: color 0.3s;
+
+    &:hover {
+      color: color(purpleColor);
+    }
+  }
+
+  .img-wrap {
+    width: 100%;
+    height: auto;
+  }
+
+  img {
+    width: 25rem;
+    border-radius: 1rem;
+    border: 2px solid #000;
+    margin-bottom: 1rem;
+  }
+}

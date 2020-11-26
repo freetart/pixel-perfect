@@ -1,0 +1,35 @@
+.testimonials {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/nature1.jpg") center/cover no-repeat;
+
+  &-content {
+    @include sectionSpacing();
+    @include flexLayout();
+
+    img {
+      width: 20rem;
+      border-radius: 100%;
+      object-fit: cover;
+      border: 0.2rem solid color(purpleColor);
+    }
+
+    p {
+      color: color(lightGray);
+      font-size: size(md);
+      width: 70%;
+      text-align: center;
+      margin: 1rem;
+
+      @include response(sm) {
+        width: 90%;
+      }
+    }
+
+    span {
+      color: color(purpleColor);
+      font-size: size(lg);
+      padding: 0 1rem;
+      font-style: italic;
+    }
+  }
+}

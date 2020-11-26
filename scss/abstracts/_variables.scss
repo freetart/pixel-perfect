@@ -1,0 +1,28 @@
+$colors: (
+  textColorLight: #fff,
+  textColorDark: #545454,
+  lightGray: #fbfbfb,
+  darkGray: #292825,
+  darkerGray: #242320,
+  purpleColor: #ad7de0,
+  orangeColor: #f18b6d,
+  yellowColor: #f3d84d,
+  successColor: #2ecc71,
+  errorColor: #e74c3c,
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+$font-sizes: (
+  xl: 3rem,
+  lg: 2.5rem,
+  md: 2rem,
+  sm: 1.8rem,
+  xs: 1.6rem,
+);
+
+@function size($size) {
+  @return map-get($font-sizes, $size);
+}

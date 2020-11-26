@@ -1,0 +1,53 @@
+.services-section {
+  @include sectionSpacing();
+
+  .services-para {
+    text-align: center;
+    font-size: size(sm);
+    width: 80%;
+    margin: auto;
+  }
+
+  .services {
+    @include flexLayout();
+    flex-direction: row;
+    padding: 1rem;
+    text-align: center;
+
+    @include response(xl) {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  i {
+    font-size: size(xl);
+    margin-top: 4rem;
+  }
+
+  h4 {
+    @include headingStyles();
+    font-size: size(lg);
+    margin: 1rem 0;
+  }
+
+  p {
+    font-size: size(sm);
+    line-height: 1.3;
+  }
+
+  .icon1,
+  .services-heading-1 {
+    color: color(orangeColor);
+  }
+
+  .icon2,
+  .services-heading-2 {
+    color: color(purpleColor);
+  }
+
+  .icon3,
+  .services-heading-3 {
+    color: color(yellowColor);
+  }
+}

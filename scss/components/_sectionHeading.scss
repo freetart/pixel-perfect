@@ -1,0 +1,12 @@
+.section-heading {
+  @include headingStyles();
+  color: color(purpleColor);
+  font-size: size(xl) + 2rem;
+  text-align: center;
+  text-shadow: 0.1rem 0.1rem 0.2rem color(darkGray);
+  font-family: "Cedarville Cursive", cursive;
+
+  @include response(sm) {
+    font-size: size(xl) + 1rem;
+  }
+}
